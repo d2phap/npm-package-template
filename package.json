@@ -2,7 +2,6 @@
   "name": "npm-package-template",
   "version": "0.9.0",
   "description": "NPM package template with Typescript, Webpack, SCSS, EsLint, Babel",
-  "homepage": "https://imageglass.org",
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack --watch --config ./webpack.config.js --progress --mode=development",
@@ -18,6 +17,10 @@
   ],
   "author": "Duong Dieu Phap",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d2phap/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/d2phap/npm-package-template",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
