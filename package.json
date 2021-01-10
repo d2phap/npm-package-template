@@ -1,0 +1,39 @@
+{
+  "name": "npm-package-template",
+  "version": "0.9.0",
+  "description": "NPM package template with Typescript, Webpack, SCSS, EsLint, Babel",
+  "homepage": "https://imageglass.org",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack --watch --config ./webpack.config.js --progress --mode=development",
+    "build": "webpack --config ./webpack.config.js --progress --mode=production"
+  },
+  "keywords": [
+    "npm",
+    "npm-package",
+    "babel",
+    "typescript",
+    "eslint",
+    "webpack"
+  ],
+  "author": "Duong Dieu Phap",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-webpack-plugin": "^2.4.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1"
+  }
+}
