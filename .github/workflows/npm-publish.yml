@@ -46,7 +46,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - name: Set up NPM authentication
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PERSONAL_TOKEN }}" >> ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PERSONAL_TOKEN }}\r\n@d2phap:registry=https://npm.pkg.github.com" >> ~/.npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
