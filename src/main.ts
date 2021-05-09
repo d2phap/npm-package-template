@@ -1,5 +1,5 @@
 
-import { SampleType } from './modules/sample';
+import { SampleType } from '@/modules/sample';
 
 const str: SampleType = 'hello';
 
