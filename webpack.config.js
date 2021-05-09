@@ -2,10 +2,22 @@ const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 const pkJson = require('./package.json');
 const license = fs.readFileSync('./LICENSE', 'utf-8');
+
+const copyright = (licenseFile) => `
+  ${pkJson.displayName} v${pkJson.version}
+  ----------------------------------------
+  Copyright (c) ${new Date().getFullYear()} ${pkJson.author}.
+  Homepage: ${pkJson.homepage}
+  Released under the ${pkJson.license} License.
+
+  License information can be found in ${licenseFile}.
+`;
+
 
 module.exports = {
   entry: './src/main.ts',
@@ -52,4 +64,18 @@ module.exports = {
       extensions: ['ts', 'js'],
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          sourceMap: true,
+        },
+        extractComments: {
+          filename: `${pkJson.name}.LICENSE.txt`,
+          banner: copyright,
+        },
+      }),
+    ],
+  },
 };
