@@ -4,6 +4,7 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "declaration": true,
+    "declarationDir": "./dist/@types",
     "esModuleInterop": true,
     "sourceMap": true,
     "module": "ESNext",
@@ -12,11 +13,11 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": [
-    "src/**/*",
+    "src/**/*"
   ],
   "exclude": ["node_modules"]
 }

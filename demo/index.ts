@@ -1,6 +1,6 @@
 
-import * as xxx from '@d2phap/npm-package-template';
+import {user, author} from '@d2phap/npm-package-template';
 
 
-console.log(xxx.default.author);
+console.log(user, author);
 

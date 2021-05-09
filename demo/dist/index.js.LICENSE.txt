@@ -1,5 +1,5 @@
 /*! 
-  NPM package template v0.9.1
+  NPM package template v0.9.4
   ----------------------------------------
   Copyright (c) 2021 Duong Dieu Phap.
   Homepage: https://github.com/d2phap/npm-package-template

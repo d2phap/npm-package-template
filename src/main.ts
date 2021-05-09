@@ -1,3 +1,4 @@
+
 import { Person } from '@/modules/person';
 
 export const user: Person = {
