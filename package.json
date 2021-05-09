@@ -3,7 +3,9 @@
   "displayName": "NPM package template",
   "version": "0.9.1",
   "description": "NPM package template with Typescript, Webpack, SCSS, EsLint, Babel",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": ["dist"],
   "scripts": {
     "start": "webpack --watch --config ./webpack.config.js --progress --mode=development",
     "build": "webpack --config ./webpack.config.js --progress --mode=production"

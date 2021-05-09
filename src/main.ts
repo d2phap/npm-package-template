@@ -1,6 +1,8 @@
+import { author, Person } from '@/modules/person';
 
-import { SampleType } from '@/modules/sample';
+const user: Person = {
+  firstName: 'Alice',
+  lastName: 'Smith',
+};
 
-const str: SampleType = 'hello';
-
-console.log(str);
+console.log('Current users', author, user);
