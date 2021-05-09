@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "start": "webpack --watch --config ./webpack.config.js --progress --mode=development",
-    "build": "webpack --config ./webpack.config.js --progress --mode=production"
+    "build": "webpack --config ./webpack.config.js --progress --mode=production",
+    "test": ""
   },
   "keywords": [
     "npm",
@@ -26,6 +27,7 @@
     "url": "https://github.com/d2phap/npm-package-template/issues"
   },
   "repository": {
+    "type": "git",
     "url": "https://github.com/d2phap/npm-package-template.git"
   },
   "homepage": "https://github.com/d2phap/npm-package-template",
