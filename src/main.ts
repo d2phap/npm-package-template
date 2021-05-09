@@ -1,8 +1,8 @@
-import { author, Person } from '@/modules/person';
+import { Person } from '@/modules/person';
 
-const user: Person = {
+export const user: Person = {
   firstName: 'Alice',
   lastName: 'Smith',
 };
 
-export default { author, user };
+export * from '@/modules/person';

@@ -6,7 +6,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "sourceMap": true,
-    "module": "UMD",
+    "module": "ESNext",
     "target": "ES5",
     "allowJs": true,
     "moduleResolution": "node",
