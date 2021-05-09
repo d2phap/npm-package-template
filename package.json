@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-template",
+  "name": "@d2phap/npm-package-template",
   "displayName": "NPM package template",
   "version": "0.9.1",
   "description": "NPM package template with Typescript, Webpack, SCSS, EsLint, Babel",
@@ -22,6 +22,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/d2phap/npm-package-template/issues"
+  },
+  "repository": {
+    "url": "https://github.com/d2phap/npm-package-template.git",
   },
   "homepage": "https://github.com/d2phap/npm-package-template",
   "devDependencies": {
