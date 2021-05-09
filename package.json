@@ -1,7 +1,7 @@
 {
   "name": "@d2phap/npm-package-template",
   "displayName": "NPM package template",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "NPM package template with Typescript, Webpack, SCSS, EsLint, Babel",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
