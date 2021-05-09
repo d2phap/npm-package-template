@@ -5,4 +5,4 @@ const user: Person = {
   lastName: 'Smith',
 };
 
-console.log('Current users', author, user);
+export default { author, user };

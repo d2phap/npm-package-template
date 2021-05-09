@@ -90,7 +90,7 @@ module.exports = (env, argv) => {
             compress: isProduction,
           },
           extractComments: {
-            filename: `${pkJson.name}.LICENSE.txt`,
+            filename: 'LICENSE.txt',
             banner: copyright,
           },
         }),
