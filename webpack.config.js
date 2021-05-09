@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 
 const pkJson = require('./package.json');
@@ -27,8 +28,11 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'index.js',
 
-    library: pkJson.name,
-    libraryTarget: 'umd',
+    library: {
+      name: pkJson.name,
+      type: 'umd',
+      umdNamedDefine: true,
+    },
   },
   module: {
     rules: [
@@ -62,6 +66,10 @@ module.exports = {
       ignore: true,
       useEslintrc: true,
       extensions: ['ts', 'js'],
+    }),
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, './dist')],
     }),
   ],
   optimization: {
