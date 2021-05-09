@@ -20,19 +20,19 @@ const copyright = (licenseFile) => `
 `;
 
 
-module.exports = {
+const configs = {
   entry: './src/main.ts',
-  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'index.js',
+    filename: 'main.js',
 
     library: {
       name: pkJson.name,
       type: 'umd',
       umdNamedDefine: true,
     },
+    globalObject: 'this',
   },
   module: {
     rules: [
@@ -72,18 +72,29 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, './dist')],
     }),
   ],
-  optimization: {
-    minimize: process.env.NODE_ENV === 'production',
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          sourceMap: true,
-        },
-        extractComments: {
-          filename: `${pkJson.name}.LICENSE.txt`,
-          banner: copyright,
-        },
-      }),
-    ],
-  },
 };
+
+
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
+
+  return {
+    ...configs,
+    devtool: 'source-map',
+    optimization: {
+      minimize: isProduction,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            sourceMap: true,
+            compress: isProduction,
+          },
+          extractComments: {
+            filename: `${pkJson.name}.LICENSE.txt`,
+            banner: copyright,
+          },
+        }),
+      ],
+    },
+  };
+}
