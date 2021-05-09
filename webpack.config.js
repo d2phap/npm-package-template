@@ -4,7 +4,6 @@ const fs = require('fs');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const pkJson = require('./package.json');
 const license = fs.readFileSync('./LICENSE', 'utf-8');
@@ -56,7 +55,6 @@ const configs = {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-    plugins: [new TsConfigPathsPlugin()],
   },
   plugins: [
     new webpack.BannerPlugin(license),
