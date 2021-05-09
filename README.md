@@ -6,7 +6,7 @@ Package url: https://www.npmjs.com/package/@d2phap/npm-package-template
 
 Try the package:
 ```
-npm i vue-file-selector
+npm i @d2phap/npm-package-template
 ```
 
 ## ☢️ Development note!
